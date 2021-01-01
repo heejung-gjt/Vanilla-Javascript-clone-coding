@@ -1,0 +1,103 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.game{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 800px;height: 500px;
+    background:url(img/background.png) center/cover;
+    border-radius: 15px;
+}
+.game__button{
+    width:60px;height: 60px;
+    background-color: wheat;
+    border:4px solid black;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: transform 300ms ease-in
+}
+.game__button:hover{
+    transform:scale(1.1);
+}
+.game__timer{
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 5px solid black;
+    font-size: 32px;
+    margin-top: 8px;
+    border-radius: 15px;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
+}
+.game__score{
+    text-align: center;
+    line-height: 45px;
+    width: 50px;height: 50px;
+    margin-top: 8px;
+    font-size: 40px;
+    background-color: darksalmon;
+    border-radius: 50%;
+    border: 3px solid black;
+    color: white;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
+}
+.game__header{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;   /* 버튼의 중심축을 수평으로 해주어서 inline효과를 준다 */
+}
+
+.game__field{
+    width: 100%;height: 100%;
+    margin-top: 40px;
+    position: relative;
+    
+}
+.pop-up{
+    display: block;
+    margin: auto;
+    width: 400px;height: 140px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    transform:translateY(-150%)
+}
+.pop-up--hide{
+    display:none;
+}
+.pop-up__refresh{
+    width: 60px;
+    height: 60px;
+    font-size:24px;
+    background-color: wheat;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.pop-up__message{
+    display: block;
+    font-size: 38px;
+}
+
+.carrot,
+.bug{
+    transition: transform 100ms ease-in;
+}
+.carrot:hover,
+.bug:hover{
+    transform: scale(1.1);
+}
